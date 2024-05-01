@@ -313,7 +313,7 @@ export const generateInputSource = (videoConfig, source) => {
     }
 
     if (videoConfig.timeout > 0 && !inputSource.includes('-timeout')) {
-      inputSource = `-timout${videoConfig.timeout * 10000000} ${inputSource}`;
+      inputSource = `-timeout ${videoConfig.timeout * 10000000} ${inputSource}`;
     }
 
     if (videoConfig.maxDelay >= 0 && !inputSource.includes('-max_delay')) {
