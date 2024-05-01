@@ -641,7 +641,7 @@
                       .input-info.tw-italic {{ message }}
 
                 label.form-input-label Stream Timeout ¹
-                v-text-field(v-model.number="cam.videoConfig.stimeout" :hint="$t('timeout_info')" persistent-hint type="number" prepend-inner-icon="mdi-numeric" background-color="var(--cui-bg-card)" color="var(--cui-text-default)" solo)
+                v-text-field(v-model.number="cam.videoConfig.timeout" :hint="$t('timeout_info')" persistent-hint type="number" prepend-inner-icon="mdi-numeric" background-color="var(--cui-bg-card)" color="var(--cui-text-default)" solo)
                   template(v-slot:prepend-inner)
                     v-icon.text-muted {{ icons['mdiNumeric'] }}
                   template(v-slot:message="{ key, message}")

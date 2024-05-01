@@ -271,7 +271,7 @@ export default {
         videoConfig: {
           source: '',
           stillImageSource: '',
-          stimeout: 10,
+          timeout: 10,
           audio: false,
           debug: false,
         },

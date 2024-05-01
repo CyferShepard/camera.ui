@@ -312,8 +312,8 @@ export const generateInputSource = (videoConfig, source) => {
       inputSource = `-re ${inputSource}`;
     }
 
-    if (videoConfig.stimeout > 0 && !inputSource.includes('-stimeout')) {
-      inputSource = `-timout${videoConfig.stimeout * 10000000} ${inputSource}`;
+    if (videoConfig.timeout > 0 && !inputSource.includes('-timeout')) {
+      inputSource = `-timout${videoConfig.timeout * 10000000} ${inputSource}`;
     }
 
     if (videoConfig.maxDelay >= 0 && !inputSource.includes('-max_delay')) {
@@ -365,7 +365,7 @@ export const checkDeprecatedFFmpegArguments = (ffmpegVersion, ffmpegArguments) =
 
   if (compareVersions.compare(ffmpegVersion, '5.0.0', '>=')) {
     ffmpegArgumentsArray = ffmpegArgumentsArray.map((argument) => {
-      if (argument === '-stimeout') {
+      if (argument === '-timeout') {
         argument = '-timeout';
       }
 
