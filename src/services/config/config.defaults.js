@@ -71,6 +71,7 @@ export const minNodeVersion = '16.12.0';
 
 export class ConfigSetup {
   constructor(config = {}) {
+    console.log(ffmpegPath);
     return {
       ...ConfigSetup.setupUi(config),
       options: ConfigSetup.setupOptions(config?.options),
